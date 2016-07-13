@@ -1,8 +1,15 @@
+$blue: #3C91E6;
+$lightgrey: #E6FAFC;
+$grey: #607466;
+$onyx: #343E3D;
+$orange: #FA824C;
+
+
+
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  border: solid black 1px;
 
   h3, h4, h5, h6, p, ul {
     margin: 0;
@@ -11,31 +18,26 @@
   }
 }
 
+body {
+  background-color: lighten($onyx, 70%);
+}
+
+.hidden {
+  visibility: none;
+}
+
 .container {
-  margin: 10px 3%;
+  margin: 30px auto;
   max-width: 1100px;
   font-size: 62.5%;
-}
-
-.img-container {
-    max-width: 100%;
-    margin: 3%;
-    overflow: hidden;
-    img {
-      min-width: 100%;
-    }
-}
-
-.audio-bar {
-  margin: 10px 3%;
-  audio {
-    min-width: 100%;
-  }
 }
 
 header,
 .search-container {
   margin: 0 3%;
+}
+.search-container {
+  margin-top: 15px;
 }
 
 header,
@@ -43,14 +45,17 @@ form {
   display: flex;
   justify-content: space-between;
   .logo {
-    width: 80%;
+    width: 90%;
     h3 {
       font-size: 1.9em;
       padding: 3px 2%;
+      color: $onyx;
+      border-bottom: 1px solid lighten($onyx, 20%);
     }
     p {
       font-size: 1.4em;
       padding: 2px 4%;
+      color: lighten($onyx, 10%);
     }
   }
 
@@ -59,71 +64,147 @@ form {
     justify-content: center;
     align-items: center;
     margin: 3px 0;
+    padding: 0 25px;
+    // width: 20%;
+    border-right: solid 1px lighten($onyx, 20%);
+    border-left: solid 1px lighten($onyx, 20%);
     i {
       font-size: 3em;
+      color: lighten($onyx, 10%);
     }
   }
 
   #search {
-    margin: 3px 1% 3px 2%;
+    margin: 3px 2% 5px 0;
+    padding-right: 5px;
     width: 75%;
+    height: 1.6em;
+    border-radius: 3px;
+    border: solid 1px lighten($onyx, 20%);
+    background-color: lighten($onyx, 35%);
+    color: white;
+    font-size: 1.6em;
+    text-align: end;
+    &:focus {
+      outline-color: transparent;
+      outline-style: none;
+    }
   }
   #submit {
-    margin: 3px 2% 3px 1%;
+    margin: 3px 0;;
     width: 25%;
+    background-color: $onyx;
+    color: white;
+    font-size: 1.3em;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    border-radius: 3px;
+    border: solid 1px $onyx;
+    &:focus {
+      outline-color: transparent;
+      outline-style: none;
+    }
+  }
+}
+
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 3% 5px;
+    img {
+      max-width: 100%;
+    }
+}
+
+.audio-bar {
+  margin: 5px 3%;
+  audio {
+    min-width: 100%;
   }
 }
 
 .results-container {
   margin: 0 3%;
+  height: 345px;
+  overflow: scroll;
   .track {
+    width: 100%;
     display: flex;
-  }
-  .artwork {
-    width: 10%;
-    height: 50px;
+    border: solid 1px lighten($onyx, 30%);
   }
   .info {
     width: 90%;
     display: flex;
     .title {
-      width: 30%;
+      width: 40%;
       margin: auto;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      color: $onyx;
+      letter-spacing: 0.04em;
       h4 {
-        margin: 0 2%;
+        margin: 0 2% 0 10%;
+        padding: 10px 0 10px 7%;
+        border-left: solid 1px lighten($onyx, 30%);
       }
     }
     .artist {
-      width: 70%;
+      width: 60%;
       margin: auto;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       h6 {
-        margin: 0 2%;
+        margin: 0 2% 0 22%;
+        border-bottom: solid 1px lighten($onyx, 30%);
+        padding: 3px 0;
       }
       h5 {
-        margin: 0 4%;
+        margin: 0 2%;
+        padding: 3px 0;
+        border-bottom: solid 1px lighten($onyx, 30%);
+      }
+      .fixed {
+        color: $onyx;
+        font-weight: 300;
+        letter-spacing: 0.03em;
       }
     }
   }
 }
 
+.artwork {
+  width: 65px;
+  img {
+    width: 100%;
+    margin: 3px 0 1px 3px;
+  }
+}
 
+@media screen and (min-width: 500px) {
+  .container {
+    width: 500px;
+    margin: inherit auto;
+  }
 
+  .img-container {
+    margin-right: 3%;
+    justify-content: flex-end;
+    img {
+      width: 469px;
+    }
+  }
+}
 
+@media screen and (max-width: 750px) {
 
-
-
-
-
-
-
+}
+// 3.2%
 
 
 
