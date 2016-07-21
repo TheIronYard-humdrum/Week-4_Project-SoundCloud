@@ -25,14 +25,31 @@
           <button id="submit">Search</button>
         </form>
       </div>
-      <div class="img-container">
-        <img src="http://www.placecage.com/c/1375/1375">
-      </div>
-      <div class="audio-bar">
-        <audio controls autoplay src=""></audio>
-      </div>
-      <div class="results-container">
-        <ul class="resutls-list">
+
+<!--  Adding container to wrap imgae and audio. -->
+<!-- Add another container to hold UL of suggested songs -->
+<!-- Wrap both of those in parent container set width to 100% -->
+        <div class='main-content'>
+          <div class="audio-player">
+            <div class="img-container">
+              <img src="http://www.placecage.com/c/1375/1375">
+            </div>
+            <div class="audio-bar">
+              <audio controls autoplay src=""></audio>
+            </div>
+          </div>
+          <div class="auto-feed">
+            <h2 class="suggested">Suggested Songs</h2>
+            <ul class="auto-feed-results">
+
+            </ul>
+          </div>
+        </div>
+
+<!-- - - - - - - - - - - - - - - - -->
+
+      <div class="results-container off">
+        <ul class="results-list">
         
         </ul>
       </div>

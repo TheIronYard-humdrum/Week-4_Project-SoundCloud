@@ -107,30 +107,46 @@ form {
   }
 }
 
+.main-content {
+  display: flex;
+  max-width: 1100px;
+  margin: 5px 3%;
+}
+
+.audio-player {
+  // display: flex;
+  width: 50%;
+  margin: 0 1.5% 5px 3%;
+}
 
 .img-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0px 3% 5px;
+    width: 100%;
     img {
-      max-width: 100%;
+      width: 100%;
     }
 }
 
 .audio-bar {
-  margin: 5px 3%;
   audio {
-    min-width: 100%;
+    width: 100%;
   }
 }
 
-.results-container {
+// .off {
+//   display: none;
+// }
+
+.results-container, .auto-feed {
   margin: 0 3%;
-  height: 284px;
+  max-height: 284px;
   overflow: scroll;
+  border: solid 1px lighten($onyx, 30%);
   .track {
     width: 100%;
+    height: 71px;
     display: flex;
     border: solid 1px lighten($onyx, 30%);
   }
@@ -162,20 +178,33 @@ form {
       h6 {
         margin: 0 2% 0 22%;
         border-bottom: solid 1px lighten($onyx, 30%);
-        padding: 3px 0;
+        padding: 3px 3px;
+        color: $onyx;
+        font-weight: 300;
+        letter-spacing: 0.03em;
       }
       h5 {
         margin: 0 2%;
         padding: 3px 0;
         border-bottom: solid 1px lighten($onyx, 30%);
       }
-      .fixed {
-        color: $onyx;
-        font-weight: 300;
-        letter-spacing: 0.03em;
-      }
     }
   }
+}
+
+.auto-feed {
+  // display: flex;
+  width: 50%;
+  max-height: 457px;
+  overflow: scroll;
+  border: solid lighten($onyx, 30%) 2px;
+  margin: 0 3% 5px 1.5%;
+}
+
+.suggested {
+  margin: 10px 50% 10px 5px;
+  padding: 0;
+  border-bottom: solid lighten($onyx, 30%) 1px;
 }
 
 .artwork {
@@ -186,24 +215,26 @@ form {
   }
 }
 
-@media screen and (min-width: 500px) {
-  .container {
-    width: 500px;
-    margin: inherit auto;
-  }
+// @media screen and (min-width: 500px) {
+//   .container {
+//     width: 500px;
+//     margin: 30px 0 0 ;
+//   }
 
-  .img-container {
-    margin-right: 3%;
-    justify-content: flex-end;
-    img {
-      width: 469px;
-    }
-  }
-}
+//   .img-container {
+//     margin-right: 3%;
+//     justify-content: flex-end;
+//     img {
+//       width: 469px;
+//     }
+//   }
+// }
 
-@media screen and (max-width: 750px) {
-
-}
+// @media screen and (max-width: 570px) {
+//   .container {
+//     margin: 30px 0 0 35px;
+//   }
+// }
 // 3.2%
 
 
