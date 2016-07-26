@@ -8,6 +8,9 @@ function playSong(event) {
   let player = $("audio")
   player[0].src = event.target.classList[0]
   player[0].src += "?" + client_id
+  let image = $('.main-image')
+  image[0].src = event.target.src
+
 }
 
 function populate(tracks) {
